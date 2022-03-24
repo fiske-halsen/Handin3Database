@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Handin3Database.ViewModel.TweetViewModel
+
+<script> 
+
+    var model = @Html.Raw(Model.Tweets)
+
+
+</script>
+
+<div class="text-center">
+    <h1 class="display-4">Mongo DB Handin 3</h1>
+
+    @foreach (var tweet in Model.Tweets)
+    {
+        <p>@tweet</p>
+    }
+
+    <button onclick="PrintTweets"> Click me </button>
+
+</div>
+
+<script type="text/javascript" src="~/js/site.js"></script>
